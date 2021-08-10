@@ -6,8 +6,15 @@ conteudo = ler_arquivo('Frase_Encriptada.TXT')
 # criando um novo arquivo 'resultado.txt' no modo escrita (w)
 arquivo_resultado = open('resultado.TXT', 'w')
 
-# escrevendo o resultado do texto descriptado no arquivo 'resultado.txt'
+# escrevendo o resultado do texto decriptado no arquivo 'resultado.txt'
 arquivo_resultado.write(descriptografar_texto(conteudo))
 
 # fechando o arquivo 'resultado.txt'
 arquivo_resultado.close()
+
+""" 
+    Entidade: Unifil EAD
+    Nome: Laryssa Stephanie Andrade da Costa Silva
+    Data: 10-08-2021 00:40
+    Objetivo: Ler arquivo TXT e decriptar seu conteudo
+"""
