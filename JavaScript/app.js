@@ -8,17 +8,17 @@ encriptado no input para ver o texto decriptado na saída.
 */
 
 var lerArquivo = function(arquivo) {
-    var input = arquivo.target;
+    var input = arquivo.target; 
 
     var reader = new FileReader();
-    reader.onload = function(){
-      var text = reader.result;
-      var node = document.getElementById('output');
-      node.innerText = text;
-      var resultado = document.getElementById('resultado');
-      resultado.innerText = descriptar(text);
+    reader.onload = function(){ // evento onload será chamado quando o content for lido. 
+      var text = reader.result; // já terá o conteúdo como um texto
+      var node = document.getElementById('output'); // identifica a div output (html)
+      node.innerText = text; // coloca o conteúdo do arquivo lido na div output
+      var resultado = document.getElementById('resultado'); // identifica a div resultado (html)
+      resultado.innerText = descriptar(text); // imprime o texto decriptado chamando a função descriptar()
     };
-    reader.readAsText(input.files[0]);
+    reader.readAsText(input.files[0]); // primeiro arquivo, indice 0. Ler como texto.
 };
 
 function descriptar(texto) {
